@@ -84,7 +84,7 @@ function runStatusChecks {
   check \
     "Waking up requires a password to unlock?" \
     "DELAY=\$(sysadminctl -screenLock status 2>&1 | grep -o '[0-9]* seconds' | grep -o '[0-9]*'); [ -n \"\$DELAY\" ] && [ \$DELAY -lt 3600 ]" \
-    "WARN" "Check that System Preferences > Lock Screen > Require password is set to 'After 15 minutes' or less"
+    "WARN" "Check that System Settings > Lock Screen > Require password is set to 'After 15 minutes' or less"
 
   check \
     "Automatic login is disabled?" \
@@ -136,9 +136,9 @@ function runStatusChecks {
     "ERROR" "Run: sudo spctl --master-enable"
 
   check \
-    "Find my Mac is enabled?" \
+    "Find My Mac is enabled?" \
     "defaults read /library/preferences/com.apple.FindMyMac.plist FMMEnabled | grep 1" \
-    "WARN" "System Preferences > iCloud > Turn on \"Find My Mac\""
+    "ERROR" "System Settings > Your Name >iCloud > Saved to iCloud > See All > Turn on \"Find my Mac\""
 
   check \
     "Workstation routing is disabled?" \
