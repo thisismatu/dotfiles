@@ -1,0 +1,45 @@
+// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+  "variables": {
+    "font_face": "InterVariable",
+  },
+  "rules": [
+    {
+      "class": "tab_label",
+      "font.size": "var(font_size)",
+    },
+    {
+      "class": "sidebar_heading",
+      "font.size": "var(font_size)",
+      "font.bold": false,
+    },
+    {
+      "class": "sidebar_tree",
+      "row_padding": [
+        16,
+        6,
+        4,
+        6
+      ],
+      "indent": 16,
+      "indent_offset": 0,
+    },
+    {
+      "class": "sidebar_label",
+      "font.size": "var(font_size_lg)",
+    },
+    {
+      "class": "disclosure_button_control",
+      "layer0.opacity": 0,
+    },
+    {
+      "class": "quick_panel",
+      "row_padding": [
+        8,
+        6,
+        8,
+        6
+      ],
+    },
+  ]
+}

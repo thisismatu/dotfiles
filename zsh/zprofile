@@ -1,0 +1,7 @@
+# If Silicon Mac
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# See https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#if-youre-on-ventura-or-higher
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.3.2

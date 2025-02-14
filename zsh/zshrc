@@ -1,0 +1,40 @@
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export TERM="xterm-256color" CLICOLOR=1
+export GOPATH=$HOME/go
+export EDITOR="zed --wait"
+export PATH=$GOPATH/bin:$PATH
+
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
+
+autoload -Uz add-zsh-hook vcs_info
+autoload -Uz compinit && compinit
+setopt prompt_subst
+add-zsh-hook precmd vcs_info
+
+PROMPT='%F{green}%(4~|…/%3~|%~)%f ${vcs_info_msg_0_}'
+
+zstyle ':completion:*' completer _extensions _complete _approximate
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
+zstyle ':completion:*' menu select
+zstyle ':completion:*' complete-options true
+zstyle ':completion:*' file-sort modification
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' list-colors "di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '*'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:git:*' formats '%F{blue}(%b%u%c)%f '
+zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
+
+# brew install mcfly
+eval "$(mcfly init zsh)"
+
+# editor shorthand
+function z() {
+  zed -w $1
+}
