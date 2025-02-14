@@ -90,7 +90,7 @@ The [gitconfig](./git/gitconfig) file contains some useful aliases and settings.
 
 ```sh
 [includeIf "gitdir:~/Sites/<company>/"]
-  	path = ~/Sites/<company>/.gitconfig
+    path = ~/Sites/<company>/.gitconfig
 ```
 
 ### Signed commits with GitX
