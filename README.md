@@ -8,8 +8,8 @@ Dotfiles, mac defaults and whatnot to improve the experience of using different 
 
 ## Software
 
-![Note]
-As of writing this, Figma's latest version is not available through Homebrew Cask and Enpass is quite critical so install them manually.
+> [!NOTE]
+> As of writing this, Figma's latest version is not available through Homebrew Cask and Enpass is quite critical so install them manually.
 
 - https://brew.sh
 - https://google.com/chrome
