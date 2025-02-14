@@ -89,17 +89,17 @@ function runStatusChecks {
   check \
     "Automatic login is disabled?" \
     "defaults read /library/preferences/com.apple.loginwindow | grep -v autoLoginUser" \
-    "ERROR" "Disable autologin by encrypting your hard drive: https://support.apple.com/en-us/HT204837"
+    "ERROR" "Disable autologin by turning on FileVault: https://support.apple.com/en-us/HT204837"
 
   check \
     "Hard drive is encrypted?" \
     "fdesetup status" \
-    "ERROR" "Run: sudo fdesetup enable / https://support.apple.com/en-us/HT204837"
+    "ERROR" "System Settings > Privacy \& Security > FileVault > Turn on FileVault"
 
   check \
     "Software updates are installed?" \
     "! softwareupdate --list | grep -q 'Software Update found'" \
-    "ERROR" "Open \"App Store\" application > Updates > Update all"
+    "ERROR" "App Store > Updates > Update all"
 
   check \
   "Latest backup completed within two weeks and is encrypted?" \
@@ -118,7 +118,7 @@ function runStatusChecks {
   check \
     "Socket filter firewall is enabled?" \
     "/usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate | grep 'State = 1'" \
-    "ERROR" "System preferences > Security \& Privacy > Turn on firewall and reboot"
+    "ERROR" "System Settings > Network > Firewall Turn firewall on and reboot"
 
   check \
     "Application layer firewall is enabled?" \
@@ -138,7 +138,7 @@ function runStatusChecks {
   check \
     "Find My Mac is enabled?" \
     "defaults read /library/preferences/com.apple.FindMyMac.plist FMMEnabled | grep 1" \
-    "ERROR" "System Settings > Your Name >iCloud > Saved to iCloud > See All > Turn on \"Find my Mac\""
+    "ERROR" "System Settings > Your Name > iCloud > Saved to iCloud > See All > Turn on 'Find My Mac'"
 
   check \
     "Workstation routing is disabled?" \
@@ -148,16 +148,16 @@ function runStatusChecks {
   check \
     "Guest account is disabled?" \
     "defaults read /Library/Preferences/com.apple.loginwindow GuestEnabled | grep 0" \
-    "WARN" "System preferences > Users & Groups > Guest off"
+    "WARN" "System Settings > Users & Groups > Turn 'Guest User' off"
 
   check \
-    "Exactly one \"root\" account?" \
+    "Exactly one 'root' account?" \
     "[[ $(dscl . -list /Users UniqueID | grep -w 0 | wc -l) -eq 1 ]]" \
-    "ERROR" "You have $(dscl . -list /Users UniqueID | grep -w 0 | wc -l) 'root' accounts"
+    "ERROR" "You have $(dscl . -list /Users UniqueID | grep -w 0 | wc -l) 'root' accounts, contact your admin."
 
   check \
-    "Deny root login over ssh?" \
-    "[ ! -f /etc/sshd_config ] || grep -e '^[ \t]*PermitRootLogin[ \t]+no' /etc/sshd_config" \
+    "Deny root login over SSH?" \
+    "[ ! -f /etc/ssh/sshd_config ] || grep -e '^[ \t]*PermitRootLogin[ \t]+no' /etc/ssh/sshd_config" \
     "ERROR" "Add the line 'PermitRootLogin no' to /etc/sshd_config (requires sudo)"
 
   [ $(which brew) ] && check \
@@ -202,4 +202,4 @@ echo -e "${bold}${green}These look great:${reset}\n"
 runStatusChecks
 printNotifications
 
-printf "${blue}Tip:${reset} Disable Safari from sending search queries to Apple and automatically opening downloaded files.\nSafari > Preferences > Search > Uncheck 'Include Safari Suggestions'\nSafari > Preferences > General > Uncheck 'Open safe files after downloading'\n\n"
+printf "${blue}Tip:${reset} Disable Safari from sending search queries to Apple and automatically opening downloaded files.\nSafari > Settings > Search > Uncheck 'Include Safari Suggestions'\nSafari > Settings > General > Uncheck 'Open safe files after downloading'\n\n"
