@@ -75,7 +75,7 @@ function check {
       print "$question" "${yellow}Warning:${reset}" "$solution"
     elif [ $errorLevel = "SUGGESTION" ]
     then
-      print "$question" "${blue}Suggestion:${reset}" "$solution"
+      print "$question" "${purple}Suggestion:${reset}" "$solution"
     fi
   fi
 }
@@ -160,16 +160,6 @@ function runStatusChecks {
     "[ ! -f /etc/sshd_config ] || grep -e '^[ \t]*PermitRootLogin[ \t]+no' /etc/sshd_config" \
     "ERROR" "Add the line 'PermitRootLogin no' to /etc/sshd_config (requires sudo)"
 
-  check \
-    "Don't send Safari search queries to Apple?" \
-    "defaults read com.apple.Safari UniversalSearchEnabled | grep '0'" \
-    "WARN" "Safari > Preferences > Search > Smart search field: Uncheck 'Include Safari Suggestions'"
-
-  check \
-    "Safari doesn't open downloads automatically?" \
-    "defaults read com.apple.Safari AutoOpenSafeDownloads | grep '0'" \
-    "WARN" "Safari > Preferences > General > Uncheck 'Open safe files after downloading'"
-
   [ $(which brew) ] && check \
     "If homebrew is installed, is it updated and cool?" \
     "brew doctor" \
@@ -211,3 +201,5 @@ echo -e "${bold}${green}These look great:${reset}\n"
 
 runStatusChecks
 printNotifications
+
+printf "${blue}Tip:${reset} Disable Safari from sending search queries to Apple and automatically opening downloaded files.\nSafari > Preferences > Search > Uncheck 'Include Safari Suggestions'\nSafari > Preferences > General > Uncheck 'Open safe files after downloading'\n\n"
