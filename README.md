@@ -69,13 +69,19 @@ chmod +x defaults.sh audit.command
 
 ### Node and NPM
 
-By using n, all the hassle of installing node is gone.
+By using [n](https://github.com/tj/n), all the hassle of installing node is gone.
 
 ```sh
 n lts # or 'auto' to read the desiered version from .nvmrc/package.json
 ```
 
 🚧 Running `brew doctor` will give a `Unexpected header files: /usr/local/include/node/*` warning. Haven't figured out how to fix it, nor if it's a problem. But it's there.
+
+Install global npm packages
+
+```sh
+npm install -g npm-check-updates
+```
 
 ### Ruby on Rails
 
