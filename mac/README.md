@@ -1,6 +1,8 @@
-## Scripts
+# MacOS
 
-This folder contains two scripts:
+This folder contains scripts and configuration files for setting up MacOS.
+
+## Scripts
 
 - [audit.command](audit.command) - MacOS hardening audit script
 - [defaults.sh](defaults.sh) - Set MacOS defaults to my liking
@@ -13,4 +15,4 @@ chmod +x audit.command
 
 ## Terminal theme
 
-This folder also contains my preferred Terminal theme, [Cuicca](Cuicca.terminal). To use it, open the file and click on the "Import" button in the Terminal preferences.
+To use the [Cuicca](Cuicca.terminal) theme, click on the "Import" button in the Terminal preferences and locate it.

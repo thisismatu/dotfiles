@@ -1,4 +1,4 @@
-git# Zed setup
+# Zed
 
 Out of the box, [Zed](https://zed.dev/) is pretty good. I've installed only a few extensions and set up the keybindings to match my muscle memory. The settings are pretty much the same as in vscode, but with a few tweaks.
 

@@ -1,4 +1,4 @@
-# Visual Studio Code setup
+# Visual Studio Code
 
 Out of the box, [Visual Studio Code](https://code.visualstudio.com/) is ok. It has required a lot more tweaking than Zed to get it to a point where I'm happy with it. Config files are synced to the cloud and not available in this repo.
 
