@@ -28,7 +28,7 @@
   // UI
   "theme": "One Dark",
   "ui_font_size": 15,
-  "buffer_font_size": 12.5,
+  "buffer_font_size": 13,
   "buffer_font_family": "Meslo LG S",
   "scrollbar": {
     "axes": {
@@ -82,6 +82,7 @@
   // Languages & files
   "languages": {
     "Markdown": {
+      "format_on_save": "off",
       "remove_trailing_whitespace_on_save": false
     },
     "Ruby": {
