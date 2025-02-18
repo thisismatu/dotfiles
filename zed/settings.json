@@ -88,7 +88,8 @@
   "languages": {
     "Markdown": {
       "format_on_save": "off",
-      "remove_trailing_whitespace_on_save": false
+      "remove_trailing_whitespace_on_save": false,
+      "show_edit_predictions": false
     },
     "Ruby": {
       "language_servers": [
