@@ -8,6 +8,9 @@
 // from the command palette or from `Zed` application menu.
 {
   // Assistant
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "edit_predictions": {
     "disabled_globs": [
       "**/.env*",
@@ -16,19 +19,21 @@
       "**/*.cert",
       "**/*.crt",
       "**/secrets.yml"
-    ]
+    ],
+    "mode": "auto"
   },
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-3-5-sonnet"
     },
+    "default_width": 600,
     "version": "2"
   },
   // UI
   "theme": "One Dark",
   "ui_font_size": 15,
-  "buffer_font_size": 13,
+  "buffer_font_size": 13.0,
   "buffer_font_family": "Meslo LG S",
   "scrollbar": {
     "axes": {
