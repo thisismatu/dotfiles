@@ -8,6 +8,10 @@ Out of the box, [Zed](https://zed.dev/) is pretty good. I've installed only a fe
 - [keymap.json](./keymap.json)
 - [snippets](./snippets)
 
+## Extensions
+
+As of writing this, I have the following extensions installed: Basher, HTML, Java, Kotlin, Ruby, Svelte, XML, and Zig.
+
 ## Ruby on Rails
 
 Ruby/rails was pretty easy to set up in Zed. Install the **Ruby** extension, a few gems and update the settings. https://zed.dev/docs/languages/ruby

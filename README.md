@@ -47,7 +47,7 @@ brew doctor
 Install brew apps
 
 ```sh
-brew install git tig mcfly trash wget go n
+brew install git tig mcfly trash wget
 ```
 
 Install brew cask apps
@@ -69,15 +69,21 @@ chmod +x defaults.sh audit.command
 
 ### Node and NPM
 
-By using [n](https://github.com/tj/n), all the hassle of installing node is gone.
+Install [n](https://github.com/tj/n) for managing node versions
 
 ```sh
-n lts # or 'auto' to read the desiered version from .nvmrc/package.json
+brew install n
+```
+
+Then install desired node version
+
+```sh
+n lts # or 'auto' to read the desiered version from project .nvmrc/package.json/etc file.
 ```
 
 🚧 Running `brew doctor` will give a `Unexpected header files: /usr/local/include/node/*` warning. Haven't figured out how to fix it, nor if it's a problem. But it's there.
 
-Install global npm packages
+Finally, install global npm packages
 
 ```sh
 npm install -g npm-check-updates
@@ -89,6 +95,22 @@ npm install -g npm-check-updates
 2. Set the correct ruby version in `.zprofile`
 
 See [Zed](zed/Readme.md) and [Visual Studio Code](vscode/Readme.md) for editor specific setups.
+
+
+### Java / Kotlin
+
+Download and install https://developer.android.com/studio
+
+Then install java runtime
+
+```sh
+brew install java
+
+# if you need a specific JDK version, run
+brew install openjdk@17
+```
+
+Brew will suggest post install steps, follow them.
 
 ### Git
 
@@ -104,7 +126,7 @@ The [gitconfig](./git/gitconfig) file contains some useful aliases and settings.
 GitX does not support signing commits out of the box. But with the help of this workaround, i can get the signing to work:
 https://josh.fail/2019/signed-commits-with-gitx/
 
-Added a copy of the script to [git/gitx_signed_commits_workaround](./git/gitx_signed_commits_workaround).
+A copy of the script is available at [git/gitx_signed_commits_workaround](./git/gitx_signed_commits_workaround).
 
 ### Chrome with web-security disabled (optional)
 
