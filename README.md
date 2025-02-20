@@ -99,7 +99,7 @@ See [Zed](zed/Readme.md) and [Visual Studio Code](vscode/Readme.md) for editor s
 
 ### Java / Kotlin
 
-Download and install https://developer.android.com/studio
+Download and install [Android Studio](https://developer.android.com/studio)
 
 Then install java runtime
 
@@ -108,9 +108,16 @@ brew install java
 
 # if you need a specific JDK version, run
 brew install openjdk@17
+
+# brew will suggest post install steps, follow them.
 ```
 
-Brew will suggest post install steps, follow them.
+Useful Android Studio customizations:
+
+- Behavior
+  - Enable Preview Tab
+  - Always Select Opened File
+- VSCode Keymap plugin
 
 ### Git
 
