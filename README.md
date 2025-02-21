@@ -118,6 +118,10 @@ Useful Android Studio customizations:
   - Enable Preview Tab
   - Always Select Opened File
 - VSCode Keymap plugin
+- Change switcher keybinding to `ctrl+§` and tab navigation to `ctrl+tab`
+
+
+Tool for mirroring/controllng android on mac: https://github.com/Genymobile/scrcpy
 
 ### Git
 
