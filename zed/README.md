@@ -10,7 +10,7 @@ Out of the box, [Zed](https://zed.dev/) is pretty good. I've installed only a fe
 
 ## Extensions
 
-As of writing this, I have the following extensions installed: Basher, HTML, Java, Kotlin, Ruby, Svelte, XML, and Zig.
+As of writing this, I have the following extensions installed: Basher, HTML, Ruby, Svelte, and Zig.
 
 ## Ruby on Rails
 

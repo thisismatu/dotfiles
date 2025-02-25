@@ -97,7 +97,7 @@ npm install -g npm-check-updates
 See [Zed](zed/Readme.md) and [Visual Studio Code](vscode/Readme.md) for editor specific setups.
 
 
-### Java / Kotlin
+### Android
 
 Download and install [Android Studio](https://developer.android.com/studio)
 
@@ -120,8 +120,7 @@ Useful Android Studio customizations:
 - VSCode Keymap plugin
 - Change switcher keybinding to `ctrl+§` and tab navigation to `ctrl+tab`
 
-
-Tool for mirroring/controllng android on mac: https://github.com/Genymobile/scrcpy
+Tool for mirroring/controllng android on Mac: https://github.com/Genymobile/scrcpy
 
 ### Git
 
