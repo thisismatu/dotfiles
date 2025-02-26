@@ -45,5 +45,5 @@ function z() {
 
 # title
 function precmd() {
-  print -Pn "\e]2;$(pwd)\a"
+  print -Pn "\e]2;$(basename "$(pwd)")\a"
 }
