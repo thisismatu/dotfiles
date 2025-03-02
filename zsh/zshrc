@@ -38,12 +38,16 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 # brew install mcfly
 eval "$(mcfly init zsh)"
 
-# editor shorthand
+# Aliases
+alias ll="ls -alF"
+alias server="python3 -m http.server"
+
+# Editor shorthand
 function z() {
   zed -w $1
 }
 
-# title
+# Tab title
 function precmd() {
   print -Pn "\e]2;$(basename "$(pwd)")\a"
 }
