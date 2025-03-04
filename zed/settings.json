@@ -32,7 +32,8 @@
   },
   // UI
   "theme": "One Dark",
-  "ui_font_size": 15,
+  "ui_font_family": "Meslo LG S",
+  "ui_font_size": 14.0,
   "buffer_font_size": 13.0,
   "buffer_font_family": "Meslo LG S",
   "scrollbar": {
