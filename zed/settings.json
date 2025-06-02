@@ -9,7 +9,7 @@
 {
   // Assistant
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "edit_predictions": {
     "disabled_globs": [
@@ -22,10 +22,10 @@
     ],
     "mode": "subtle"
   },
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-3-5-sonnet"
+      "model": "gpt-4.1"
     },
     "default_width": 600,
     "version": "2"
