@@ -18,7 +18,8 @@
     ignore = "!ignore() { curl -L -s https://www.gitignore.io/api/$@ ;}; ignore"
     cleanup = !git branch --merged main --no-color | grep -v '^* main$' | xargs git branch -d
 [credential]
-    helper = osxkeychain
+    helper = osxkeychain # macOS
+    # helper = libsecret # Linux, install git-credential-libsecret
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
