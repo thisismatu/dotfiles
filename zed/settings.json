@@ -27,8 +27,7 @@
       "provider": "copilot_chat",
       "model": "gpt-4.1"
     },
-    "default_width": 600,
-    "version": "2"
+    "default_width": 600
   },
   // UI
   "theme": "One Dark",
