@@ -1,0 +1,39 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "super-up": "editor::MoveLineUp",
+      "super-down": "editor::MoveLineDown",
+      "super-shift-up": "editor::DuplicateLineUp",
+      "super-shift-down": "editor::DuplicateLineDown",
+      "ctrl-up": "editor::MoveToBeginning",
+      "ctrl-down": "editor::MoveToEnd",
+      "ctrl-shift-up": "editor::SelectToBeginning",
+      "ctrl-shift-down": "editor::SelectToEnd"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-`": "tab_switcher::Toggle",
+      "ctrl-r": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "super--": "pane::GoBack",
+      "super-=": "pane::GoForward",
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem",
+      "super-ctrl-t": "pane::CloseOtherItems"
+    }
+  }
+]
