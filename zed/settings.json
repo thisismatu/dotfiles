@@ -32,7 +32,7 @@
   // UI
   "theme": "One Dark",
   "ui_font_size": 15,
-  "buffer_font_size": 13.0,
+  "buffer_font_size": 13.5,
   "buffer_font_family": "Meslo LG S",
   "scrollbar": {
     "axes": {
@@ -86,62 +86,44 @@
   "format_on_save": "on",
   "extend_comment_on_newline": false,
   "lsp_highlight_debounce": 50,
+  "preferred_line_length": 100,
   // Languages & files
   "languages": {
     "Markdown": {
       "format_on_save": "off",
-      "remove_trailing_whitespace_on_save": false,
-      "show_edit_predictions": false
+      "remove_trailing_whitespace_on_save": false
     },
     "XML": {
       "preferred_line_length": 500
     },
     "Ruby": {
-      "language_servers": [
-        "solargraph",
-        "rubocop",
-        "tailwindcss-language-server",
-        "!ruby-lsp"
-      ],
-      "formatter": {
-        "external": {
-          "command": "./bin/bundle",
-          "arguments": [
-            "exec",
-            "rubocop",
-            "--auto-correct",
-            "--stdin",
-            "corrected.rb",
-            "--stderr"
-          ]
-        }
-      }
+      "tab_size": 2,
+      "formatter": "language_server",
+      "language_servers": ["ruby-lsp", "rubocop", "tailwindcss-language-server", "!solargraph"]
     },
-    "ERB": {
+    "HTML/ERB": {
+      "tab_size": 2,
+      "language_servers": ["ruby-lsp", "tailwindcss-language-server", "emmet-language-server"],
       "formatter": {
         "external": {
           "command": "erb-formatter",
-          "arguments": [
-            "--stdin",
-            "--tailwind-output-path", // Comment out if on non-tailwind project
-            "app/assets/builds/tailwind.css" // Generate this by running bin/rails tailwindcss:build
-          ]
+          "arguments": ["--stdin-filename", "{buffer_path}"]
         }
       }
+      // Previous version, works with tailwind auto sort tags
+      // "formatter": {
+      //   "external": {
+      //     "command": "erb-formatter",
+      //     "arguments": [
+      //       "--stdin",
+      //       "--tailwind-output-path", // Comment out if on non-tailwind project
+      //       "app/assets/builds/tailwind.css" // Generate this by running bin/rails tailwindcss:build
+      //     ]
+      //   }
+      // }
     }
   },
   "lsp": {
-    "solargraph": {
-      "initialization_options": {
-        "diagnostics": true,
-        "formatting": true
-      }
-    },
-    "rubocop": {
-      "initialization_options": {
-        "safeAutocorrect": false
-      }
-    },
     "tailwindcss-language-server": {
       "settings": {
         "includeLanguages": {
@@ -155,6 +137,6 @@
     }
   },
   "file_types": {
-    "HTML": ["njk"]
+    "HTML": ["*.njk"]
   }
 }

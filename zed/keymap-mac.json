@@ -1,0 +1,27 @@
+[
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-§": "tab_switcher::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-/": "editor::ToggleComments"
+    }
+  },
+  {
+    "bindings": {
+      // Disable chat panel
+      "cmd-shift-c": null
+    }
+  }
+]
