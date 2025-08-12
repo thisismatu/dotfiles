@@ -35,5 +35,18 @@
       "ctrl-shift-tab": "pane::ActivatePreviousItem",
       "super-ctrl-t": "pane::CloseOtherItems"
     }
+  },
+  {
+    "bindings": {
+      // Disable collabl panel
+      "ctrl-shift-c": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // Disable close active dock
+      "ctrl-w": null
+    }
   }
 ]
