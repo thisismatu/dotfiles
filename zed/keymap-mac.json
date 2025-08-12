@@ -20,8 +20,15 @@
   },
   {
     "bindings": {
-      // Disable chat panel
+      // Disable collab panel
       "cmd-shift-c": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // Disable close active dock
+      "cmd-w": null
     }
   }
 ]
