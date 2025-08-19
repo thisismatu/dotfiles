@@ -12,6 +12,7 @@ Dotfiles, mac defaults and whatnot to improve the experience of using different 
 > As of writing this, Figma's latest version is not available through Homebrew Cask and Enpass is quite critical so install them manually.
 
 - https://brew.sh
+- https://www.firefox.com
 - https://google.com/chrome
 - https://google.com/drive/download
 - https://enpass.io/downloads
@@ -47,7 +48,7 @@ brew doctor
 Install brew apps
 
 ```sh
-brew install git tig mcfly trash wget
+brew install git tig mcfly trash wget zsh-autosuggestions
 ```
 
 Install brew cask apps
@@ -91,11 +92,11 @@ npm install -g npm-check-updates
 
 ### Ruby on Rails
 
+> [!NOTE]
+> Maybe out of date, the [current guide](https://guides.rubyonrails.org/install_ruby_on_rails.html#install-ruby-on-macos) suggest using `mise`.
+
 1. Follow this guide on setting up ruby and chruby on your mac: https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/
 2. Set the correct ruby version in `.zprofile`
-
-See [Zed](zed/Readme.md) and [Visual Studio Code](vscode/Readme.md) for editor specific setups.
-
 
 ### Android
 
