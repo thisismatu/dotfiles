@@ -1,5 +1,9 @@
-adjust-cell-height = 4
+adjust-cell-height = 3
 adjust-cursor-thickness = 2
+clipboard-read = allow
+clipboard-trim-trailing-spaces = true
+clipboard-write = allow
+copy-on-select = false
 cursor-style = bar
 cursor-style-blink = false
 font-family = Meslo LG S
@@ -7,11 +11,9 @@ font-style-bold = false
 minimum-contrast = 2.1
 shell-integration-features = no-cursor,no-title
 theme = OneDark
+window-width = 100
+window-height = 25
 window-padding-x = 8
-clipboard-read = allow
-clipboard-write = allow
-clipboard-trim-trailing-spaces = true
-copy-on-select = false
 
 # config-file = config-mac
 # config-file = config-linux
