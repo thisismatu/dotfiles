@@ -1,0 +1,5 @@
+font-size = 11
+gtk-titlebar = false
+window-padding-y = 8
+window-subtitle = false
+window-theme = ghostty
