@@ -1,3 +1,8 @@
 font-size = 13.5
 macos-titlebar-style = tabs
 window-padding-y = 4
+keybind = super+ctrl+0=equalize_splits
+keybind = super+ctrl+down=resize_split:down,50
+keybind = super+ctrl+left=resize_split:left,50
+keybind = super+ctrl+up=resize_split:up,50
+keybind = super+ctrl+right=resize_split:right,50
