@@ -1,14 +1,28 @@
-export LANGUAGE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export TERM="xterm-256color" CLICOLOR=1
-export GOPATH=$HOME/go
+# Mac: colors in terminal
+# export TERM="xterm-256color" CLICOLOR=1
+
 export EDITOR="zed --wait"
-export PATH=$GOPATH/bin:/usr/local/sbin:$PATH
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export GOPATH=$HOME/go
+export GEM_HOME=$HOME/.gems
+export GEM_PATH=$GEM_HOME
+export PATH=$GEM_HOME/bin:$GOPATH/bin:$HOME/.local/bin:/usr/local/sbin:$PATH
+
 export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=10000
 setopt incappendhistory
+
+# Linux: homebrew
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Linux: alt-arrow navigation and delete key in terminal
+# bindkey "\e[1;5C" forward-word
+# bindkey "\e[1;5D" backward-word
+# bindkey "\e[3~" delete-char
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
@@ -49,7 +63,7 @@ function z() {
 
 # Tab title
 function precmd() {
-  print -Pn "\e]2;$(basename "$(pwd)")\a"
+  print -Pn "\e]2;$(pwd | xargs basename)\a"
 }
 
 # zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions
