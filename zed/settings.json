@@ -32,6 +32,7 @@
   // UI
   "theme": "One Dark",
   "ui_font_size": 15,
+  "ui_font_family": "Inter Variable",
   "buffer_font_size": 13.5,
   "buffer_font_family": "Meslo LG S",
   "scrollbar": {
