@@ -59,10 +59,6 @@
   "collaboration_panel": {
     "button": false
   },
-  "chat_panel": {
-    "button": "never",
-    "default_width": 300
-  },
   "notification_panel": {
     "button": false,
     "default_width": 300
@@ -90,6 +86,14 @@
   "preferred_line_length": 100,
   // Languages & files
   "languages": {
+    "Nunjucks": {
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    },
     "Markdown": {
       "format_on_save": "off",
       "remove_trailing_whitespace_on_save": false
@@ -136,8 +140,5 @@
         }
       }
     }
-  },
-  "file_types": {
-    "HTML": ["*.njk"]
   }
 }
