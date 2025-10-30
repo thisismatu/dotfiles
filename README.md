@@ -6,6 +6,19 @@ Dotfiles, configs, mac defaults, and whatnot to improve the experience of using 
 - Do more and fiddle less
 - Every computer lives its own life
 
+## Background
+
+Mac: 
+
+System settings > Wallpaper > "Space gray pro"
+
+Linux:
+
+```
+gsettings set org.gnome.desktop.background picture-options 'none'
+gsettings set org.gnome.desktop.background primary-color '#7A7B81'
+```
+
 ## Software
 
 > [!NOTE]
