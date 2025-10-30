@@ -1,6 +1,6 @@
 # Setup my laptops
 
-Dotfiles, configsm mac defaults and whatnot to improve the experience of using different computers for both work and lesure.
+Dotfiles, configs, mac defaults, and whatnot to improve the experience of using different computers for both work and lesure.
 
 - Strive for a vanilla setup
 - Do more and fiddle less
