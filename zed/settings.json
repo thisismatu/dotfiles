@@ -71,9 +71,6 @@
     "cursor_shape": "bar",
     "line_height": "standard"
   },
-  "experimental.theme_overrides": {
-    "editor.document_highlight.read_background": "#fff2"
-  },
   // Writing
   "base_keymap": "VSCode",
   "tab_size": 2,
