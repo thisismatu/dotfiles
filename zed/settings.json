@@ -31,9 +31,9 @@
   },
   // UI
   "theme": "One Dark",
-  "ui_font_size": 15,
+  "ui_font_size": 16,
   "ui_font_family": "Inter Variable",
-  "buffer_font_size": 13.5,
+  "buffer_font_size": 14,
   "buffer_font_family": "Meslo LG S",
   "scrollbar": {
     "axes": {
@@ -72,6 +72,7 @@
     "line_height": "standard"
   },
   // Writing
+  "vim_mode": false,
   "base_keymap": "VSCode",
   "tab_size": 2,
   "soft_wrap": "editor_width",
@@ -100,8 +101,8 @@
     },
     "Ruby": {
       "tab_size": 2,
-      "formatter": "language_server",
-      "language_servers": ["ruby-lsp", "rubocop", "tailwindcss-language-server", "!solargraph"]
+      "language_servers": ["ruby-lsp", "rubocop", "tailwindcss-language-server", "!solargraph"],
+      "formatter": "language_server"
     },
     "HTML/ERB": {
       "tab_size": 2,
@@ -126,6 +127,11 @@
     }
   },
   "lsp": {
+    "emmet-language-server": {
+      "settings": {
+        "excludeLanguages": ["Svelte", "svelte"]
+      }
+    },
     "tailwindcss-language-server": {
       "settings": {
         "includeLanguages": {
