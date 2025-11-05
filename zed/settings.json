@@ -127,11 +127,6 @@
     }
   },
   "lsp": {
-    "emmet-language-server": {
-      "settings": {
-        "excludeLanguages": ["Svelte", "svelte"]
-      }
-    },
     "tailwindcss-language-server": {
       "settings": {
         "includeLanguages": {
