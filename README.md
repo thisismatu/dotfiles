@@ -79,6 +79,17 @@ chmod +x defaults.sh audit.command
 ./audit.command
 ```
 
+## WhatsApp local backups
+
+Install [OpenMTP](https://github.com/ganeshrvel/openmtp) 
+
+```sh
+brew install openmtp --cask
+```
+
+Copy `Internal Storage > Android > media > com.whatsapp.com > Whatsapp` to your computer. If OpenMTP is not finding your Android device, check that developer options are off and the usb mode is set to "File Transfer".
+
+
 ## Development
 
 ### Node and NPM
