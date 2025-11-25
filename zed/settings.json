@@ -27,7 +27,7 @@
       "provider": "copilot_chat",
       "model": "gpt-4.1"
     },
-    "default_width": 600
+    "default_width": 640
   },
   // UI
   "theme": "One Dark",
@@ -48,20 +48,20 @@
     "show_nav_history_buttons": false
   },
   "project_panel": {
-    "default_width": 300
+    "default_width": 320
   },
   "git_panel": {
-    "default_width": 300
+    "default_width": 320
   },
   "outline_panel": {
-    "default_width": 300
+    "default_width": 320
   },
   "collaboration_panel": {
     "button": false
   },
   "notification_panel": {
     "button": false,
-    "default_width": 300
+    "default_width": 320
   },
   "journal": {
     "path": "~/My Drive",
