@@ -55,11 +55,7 @@ eval "$(mcfly init zsh)"
 # Aliases
 alias ll="ls -alF"
 alias server="python3 -m http.server"
-
-# Editor shorthand
-function z() {
-  zed -w $1
-}
+alias z="zed"
 
 # Tab title
 function precmd() {
