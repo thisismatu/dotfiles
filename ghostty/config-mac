@@ -1,5 +1,5 @@
-adjust-cell-width = -3%
-font-size = 13.5
+# adjust-cell-width = -2.5%
+font-size = 14
 macos-titlebar-style = tabs
 window-padding-y = 4
 
