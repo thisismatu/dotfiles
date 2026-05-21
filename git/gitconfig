@@ -1,6 +1,6 @@
 [user]
     email = mathias.lindholm@gmail.com
-    name = Mathias Lindholm
+    name = Mathias Herler
 [filter "media"]
     required = true
     clean = git media clean %f
