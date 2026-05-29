@@ -8,28 +8,33 @@
 // from the command palette or from `Zed` application menu.
 {
   // Assistant
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
   "edit_predictions": {
+    "provider": "copilot",
     "disabled_globs": [
       "**/.env*",
       "**/*.pem",
       "**/*.key",
       "**/*.cert",
       "**/*.crt",
-      "**/secrets.yml"
+      "**/secrets.yml",
     ],
-    "mode": "subtle"
+    "mode": "subtle",
   },
   "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
+    "default_profile": "ask",
     "default_model": {
+      "enable_thinking": true,
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "model": "claude-sonnet-4.5",
     },
-    "default_width": 640
+    "default_width": 640,
   },
   // UI
+  "cli_default_open_behavior": "existing_window",
+  "excerpt_context_lines": 3,
+  "expand_excerpt_lines": 5,
   "theme": "One Dark",
   "ui_font_size": 16,
   "ui_font_family": "Inter Variable",
@@ -37,39 +42,39 @@
   "buffer_font_family": "Meslo LG S",
   "scrollbar": {
     "axes": {
-      "horizontal": false
-    }
+      "horizontal": false,
+    },
   },
   "tabs": {
     "git_status": true,
-    "activate_on_close": "left_neighbour"
+    "activate_on_close": "left_neighbour",
   },
   "tab_bar": {
-    "show_nav_history_buttons": false
+    "show_nav_history_buttons": false,
   },
   "project_panel": {
-    "default_width": 320
+    "dock": "left",
+    "default_width": 320,
   },
   "git_panel": {
-    "default_width": 320
+    "dock": "left",
+    "default_width": 320,
   },
   "outline_panel": {
-    "default_width": 320
+    "dock": "left",
+    "default_width": 320,
   },
   "collaboration_panel": {
-    "button": false
-  },
-  "notification_panel": {
+    "dock": "left",
     "button": false,
-    "default_width": 320
   },
   "journal": {
     "path": "~/My Drive",
-    "hour_format": "hour24"
+    "hour_format": "hour24",
   },
   "terminal": {
     "cursor_shape": "bar",
-    "line_height": "standard"
+    "line_height": "standard",
   },
   // Writing
   "vim_mode": false,
@@ -84,25 +89,25 @@
   "preferred_line_length": 100,
   // Languages & files
   "languages": {
-    "Nunjucks": {
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-    },
     "Markdown": {
       "format_on_save": "off",
-      "remove_trailing_whitespace_on_save": false
+      "remove_trailing_whitespace_on_save": false,
     },
     "XML": {
-      "preferred_line_length": 500
+      "preferred_line_length": 500,
+    },
+    "PHP": {
+      "formatter": {
+        "external": {
+          "command": "/usr/local/bin/php-format",
+          "arguments": ["{buffer_path}"],
+        },
+      },
     },
     "Ruby": {
       "tab_size": 2,
       "language_servers": ["ruby-lsp", "rubocop", "tailwindcss-language-server", "!solargraph"],
-      "formatter": "language_server"
+      "formatter": "language_server",
     },
     "HTML/ERB": {
       "tab_size": 2,
@@ -110,9 +115,9 @@
       "formatter": {
         "external": {
           "command": "erb-formatter",
-          "arguments": ["--stdin-filename", "{buffer_path}"]
-        }
-      }
+          "arguments": ["--stdin-filename", "{buffer_path}"],
+        },
+      },
       // Previous version, works with tailwind auto sort tags
       // "formatter": {
       //   "external": {
@@ -124,19 +129,22 @@
       //     ]
       //   }
       // }
-    }
+    },
+  },
+  "file_types": {
+    "Blade": ["*.blade.php"],
   },
   "lsp": {
     "tailwindcss-language-server": {
       "settings": {
         "includeLanguages": {
           "erb": "html",
-          "ruby": "html"
+          "ruby": "html",
         },
         "experimental": {
-          "classRegex": ["\\bclass:\\s*'([^']*)'", "\\bclass:\\s*\"([^\"]*)\""]
-        }
-      }
-    }
-  }
+          "classRegex": ["\\bclass:\\s*'([^']*)'", "\\bclass:\\s*\"([^\"]*)\""],
+        },
+      },
+    },
+  },
 }

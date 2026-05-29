@@ -2,6 +2,59 @@
 
 My preferred editor.
 
+## Laravel support
+
+The current Zed config looks for our own Pint wrapper when formatting PHP files. To install it, run the commands below:
+
+```sh
+cp php-format /usr/local/bin/
+chmod +x /usr/local/bin/php-format
+```
+
+In Zed config:
+
+```json
+"languages": {
+  "PHP": {
+    "formatter": {
+      "external": {
+        "command": "/usr/local/bin/php-format",
+        "arguments": ["{buffer_path}"],
+      },
+    },
+  },
+}
+```
+
+For formatting Blade files, install it per project:
+
+```sh
+npm install --save-dev @shufo/prettier-plugin-blade prettier
+```
+
+Then in `.prettierrc`
+
+```json
+{
+  "plugins": ["@shufo/prettier-plugin-blade"],
+  "overrides": [
+    {
+      "files": ["*.blade.php"],
+      "options": {
+        "parser": "blade",
+        "tabWidth": 4,
+        "wrapAttributes": "force",
+        "wrapAttributesMinAttrs": 3,
+        "sortTailwindcssClasses": true,
+        "indentInnerHtml": true
+      }
+    }
+  ]
+}
+```
+
+For blade formatting
+
 ## Nunjucks support
 
 First, install the Nunjucks extension.
