@@ -32,7 +32,7 @@
     "default_width": 640,
   },
   // UI
-  "cli_default_open_behavior": "existing_window",
+  "cli_default_open_behavior": "new_window",
   "excerpt_context_lines": 3,
   "expand_excerpt_lines": 5,
   "theme": "One Dark",
