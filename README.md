@@ -60,7 +60,7 @@ brew doctor
 Install apps
 
 ```sh
-brew install n git tig mcfly trash wget zsh-completions zsh-autosuggestions
+brew install n git tig mcfly trash wget mole zsh-completions zsh-autosuggestions
 ```
 
 Optional cask apps
@@ -72,7 +72,7 @@ brew install --cask google-chrome google-drive raycast imageoptim notunes gitx b
 Install [MacPorts](https://www.macports.org/) (for older intel macs)
 
 ```
-sudo port install n git tig mcfly trash wget zsh-completions zsh-autosuggestions
+sudo port install n git tig mcfly trash wget mole-cleaner zsh-completions zsh-autosuggestions
 ```
 
 Once the apps are installed, set up the MacOS preferences and finally run the audit script.
