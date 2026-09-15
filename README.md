@@ -46,6 +46,8 @@ Install Xcode Command Line Tools
 xcode-select --install
 ```
 
+**Note:** Homebrew has dropped intel support, consider [MacPorts](https://www.macports.org/) on older macs
+
 Install Homebrew
 
 ```sh
