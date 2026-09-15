@@ -21,10 +21,8 @@ gsettings set org.gnome.desktop.background primary-color '#7A7B81'
 
 ## Software
 
-> [!NOTE]
-> As of writing this, Figma's latest version is not available through Homebrew Cask and Enpass is quite critical so install them manually.
-
 - https://brew.sh
+- https://www.macports.org
 - https://www.firefox.com
 - https://google.com/chrome
 - https://google.com/drive/download
@@ -37,6 +35,7 @@ gsettings set org.gnome.desktop.background primary-color '#7A7B81'
 - https://github.com/gitx/gitx
 - https://github.com/tombonez/noTunes
 - https://github.com/odlp/bluesnooze
+- https://github.com/tw93/mole
 
 ## Setup
 
@@ -46,7 +45,8 @@ Install Xcode Command Line Tools
 xcode-select --install
 ```
 
-**Note:** Homebrew has dropped intel support, consider [MacPorts](https://www.macports.org/) on older macs
+> [!NOTE]
+> Homebrew has dropped intel support, consider [MacPorts](https://www.macports.org/) on older macs
 
 Install Homebrew
 
