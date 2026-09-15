@@ -37,7 +37,7 @@ gsettings set org.gnome.desktop.background primary-color '#7A7B81'
 - https://github.com/odlp/bluesnooze
 - https://github.com/tw93/mole
 
-## Setup
+### Command Line Tools
 
 Install Xcode Command Line Tools
 
@@ -45,10 +45,7 @@ Install Xcode Command Line Tools
 xcode-select --install
 ```
 
-> [!NOTE]
-> Homebrew has dropped intel support, consider [MacPorts](https://www.macports.org/) on older macs
-
-Install Homebrew
+Install Homebrew (for silicon macs)
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -60,16 +57,22 @@ Check install
 brew doctor
 ```
 
-Install brew apps
+Install apps
 
 ```sh
-brew install git tig mcfly trash wget zsh-autosuggestions
+brew install n git tig mcfly trash wget zsh-completions zsh-autosuggestions
 ```
 
-Install brew cask apps
+Optional cask apps
 
 ```sh
 brew install --cask google-chrome google-drive raycast imageoptim notunes gitx bluesnooze appcleaner zed
+```
+
+[MacPorts](https://www.macports.org/) (for older intel macs)
+
+```
+sudo port install n git tig mcfly trash wget zsh-completions zsh-autosuggestions
 ```
 
 Once the apps are installed, set up the MacOS preferences and finally run the audit script.
