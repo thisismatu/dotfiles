@@ -45,7 +45,7 @@ Install Xcode Command Line Tools
 xcode-select --install
 ```
 
-Install Homebrew (for silicon macs)
+Install [Homebrew](https://brew.sh/) (for silicon macs)
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -69,7 +69,7 @@ Optional cask apps
 brew install --cask google-chrome google-drive raycast imageoptim notunes gitx bluesnooze appcleaner zed
 ```
 
-[MacPorts](https://www.macports.org/) (for older intel macs)
+Install [MacPorts](https://www.macports.org/) (for older intel macs)
 
 ```
 sudo port install n git tig mcfly trash wget zsh-completions zsh-autosuggestions
