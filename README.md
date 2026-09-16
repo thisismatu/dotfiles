@@ -14,7 +14,7 @@ System settings > Wallpaper > "Space gray pro"
 
 Linux:
 
-```
+```sh
 gsettings set org.gnome.desktop.background picture-options 'none'
 gsettings set org.gnome.desktop.background primary-color '#7A7B81'
 ```
@@ -45,35 +45,34 @@ Install Xcode Command Line Tools
 xcode-select --install
 ```
 
-Install [Homebrew](https://brew.sh/) (for silicon macs)
+### Package manager
+
+Install a package manager depending on your mac architecture
+
+#### [Homebrew](https://brew.sh/) (Silicon)
 
 ```sh
+# Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
 
-Check install
-
-```sh
+# Check install
 brew doctor
+
+## Install apps
+brew install git tig mcfly trash wget mole zsh-completions zsh-autosuggestions
 ```
 
-Install apps
+#### [MacPorts](https://www.macports.org/) (Intel)
 
 ```sh
-brew install n git tig mcfly trash wget mole zsh-completions zsh-autosuggestions
+# Download the installer
+https://www.macports.org/install.php
+
+# Install apps
+sudo port install git tig mcfly trash wget mole-cleaner zsh-completions zsh-autosuggestions
 ```
 
-Optional cask apps
-
-```sh
-brew install --cask google-chrome google-drive raycast imageoptim notunes gitx bluesnooze appcleaner zed
-```
-
-Install [MacPorts](https://www.macports.org/) (for older intel macs)
-
-```
-sudo port install n git tig mcfly trash wget mole-cleaner zsh-completions zsh-autosuggestions
-```
+## Defaults & audit
 
 Once the apps are installed, set up the MacOS preferences and finally run the audit script.
 
@@ -84,48 +83,57 @@ chmod +x defaults.sh audit.command
 ./audit.command
 ```
 
-## WhatsApp local backups
-
-Install [OpenMTP](https://github.com/ganeshrvel/openmtp) 
-
-```sh
-brew install openmtp --cask
-```
-
-Copy `Internal Storage > Android > media > com.whatsapp.com > Whatsapp` to your computer. If OpenMTP is not finding your Android device, check that developer options are off and the usb mode is set to "File Transfer".
-
-
 ## Development
 
-### Node and NPM
+### Node
 
 Install [n](https://github.com/tj/n) for managing node versions
 
 ```sh
-brew install n
+# Bootstrap if no npm available
+curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s install lts
+
+# Install n globally
+npm install -g n
 ```
 
-Then install desired node version
-
-```sh
-n lts # or 'auto' to read the desiered version from project .nvmrc/package.json/etc file.
-```
-
-🚧 Running `brew doctor` will give a `Unexpected header files: /usr/local/include/node/*` warning. Haven't figured out how to fix it, nor if it's a problem. But it's there.
-
-Finally, install global npm packages
+Install `ncu` for checking for updates
 
 ```sh
 npm install -g npm-check-updates
+
+# Interactive mode with a 5 day cooldown
+ncu -i -c 5
 ```
 
 ### Ruby on Rails
 
-> [!NOTE]
-> Maybe out of date, the [current guide](https://guides.rubyonrails.org/install_ruby_on_rails.html#install-ruby-on-macos) suggest using `mise`.
+See https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac
 
-1. Follow this guide on setting up ruby and chruby on your mac: https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/
-2. Set the correct ruby version in `.zprofile`
+```sh
+# Homebrew
+brew install chruby ruby-install
+
+# MacPorts
+sudo port install chruby ruby-install
+```
+
+Install a version of ruby, set it, and install rails
+
+```sh
+ruby-install ruby 4.0.6
+chruby 4.0.6
+gem install rails
+```
+
+### Laravel
+
+See https://laravel.com/framework/docs/master/installation
+
+```sh
+/bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.4)"
+composer global require laravel/installer
+```
 
 ### Android
 
@@ -134,12 +142,11 @@ Download and install [Android Studio](https://developer.android.com/studio)
 Then install java runtime
 
 ```sh
-brew install java
+# Homebrew
+brew install openjdk@<version>
 
-# if you need a specific JDK version, run
-brew install openjdk@17
-
-# brew will suggest post install steps, follow them.
+# MacPorts
+sudo port install openjdk<version>
 ```
 
 Useful Android Studio customizations:
@@ -176,3 +183,9 @@ Add chrome with `web-security` disabled for local development, if needed.
 # add to e.g. /usr/local/bin/chrome-dev
 open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
 ```
+
+## WhatsApp local backups
+
+- Install [OpenMTP](https://github.com/ganeshrvel/openmtp) 
+- Copy `Internal Storage > Android > media > com.whatsapp.com > Whatsapp` to your computer
+- If OpenMTP is not finding your Android device, check that developer options are off and the usb mode is set to "File Transfer"

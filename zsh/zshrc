@@ -1,22 +1,31 @@
-# Mac: colors in terminal
-# export TERM="xterm-256color" CLICOLOR=1
-
 export EDITOR="zed --wait"
+
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
-export GOPATH=$HOME/go
+
 export GEM_HOME=$HOME/.gems
 export GEM_PATH=$GEM_HOME
-export PATH=$GEM_HOME/bin:$GOPATH/bin:$HOME/.local/bin:/usr/local/sbin:$PATH
+export GOPATH=$HOME/.local/go
+export LOCAL_PATH=$HOME/.local/bin
+# Mac, intel
+# export MACPORTS_PATH=/opt/local/bin:/opt/local/sbin
+export HERD_LITE_PATH=$HOME/.config/herd-lite/bin
+export PHP_INI_SCAN_DIR=$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR
+# Mac, intel
+# export PATH=$GEM_HOME/bin:$GOPATH/bin:$LOCAL_PATH:$MACPORTS_PATH:$HERD_LITE_PATH:$PATH
+# Mac, silicon
+export PATH=$GEM_HOME/bin:$GOPATH/bin:$LOCAL_PATH:$HERD_LITE_PATH:$PATH
 
 export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=10000
 setopt incappendhistory
 
-# Linux: homebrew
+# Mac, silicon
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# Linux
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Linux: alt-arrow navigation and delete key in terminal
@@ -49,18 +58,27 @@ zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:git:*' formats '%F{blue}(%b%u%c)%f '
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 
-# brew install mcfly
-eval "$(mcfly init zsh)"
+# Tab title
+function precmd() {
+  print -Pn "\e]2;$(pwd | xargs basename)\a"
+}
 
 # Aliases
 alias ll="ls -alF"
 alias server="python3 -m http.server"
 alias z="zed"
 
-# Tab title
-function precmd() {
-  print -Pn "\e]2;$(pwd | xargs basename)\a"
-}
+# McFly · https://github.com/cantino/mcfly
+eval "$(mcfly init zsh)"                                                        # Homebrew
+# source "/opt/local/share/mcfly/mcfly.zsh"                                     # MacPorts
 
-# zsh-autosuggestions https://github.com/zsh-users/zsh-autosuggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# zsh-autosuggestions · https://github.com/zsh-users/zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh       # Homebrew
+# source "/opt/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"         # MacPorts
+
+# chruby · https://github.com/postmodern/chruby
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh                       # Homebrew
+source $(brew --prefix)/opt/chruby/share/chruby/auto.sh                         # Homebrew
+# source /opt/local/share/chruby/chruby.sh                                      # MacPorts
+# source /opt/local/share/chruby/auto.sh                                        # MacPorts
+chruby 4.0.6
