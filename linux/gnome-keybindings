@@ -1,3 +1,6 @@
+# Gnome keyboard bindings for Linux on Apple Hardware
+# Restore each section using `dconf load <file>`
+
 # /org/gnome/desktop/wm/keybindings/
 [/]
 move-to-monitor-down=@as []
