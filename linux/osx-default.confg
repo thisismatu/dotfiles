@@ -1,5 +1,4 @@
-# Mac like keyboard bindings for mac keyboard
-
+# Mac-like keyboard bindings for Linux on Apple Hardware
 # Place in /etc/keyd/default.conf
 # Inspired by https://github.com/omacom/omarchy/discussions/175
 
@@ -12,11 +11,11 @@ leftmeta = layer(cmd)
 rightmeta = layer(cmd)
 
 [alt]
-# Disable alt+tab
+# Disable alt+tab so it doesn't conflict with app_switch_state
 tab = noop
 
 [alt:C]
-# Option text navigation
+# Option text navigation and selection
 right = C-right
 left = C-left
 backspace = C-backspace
@@ -28,6 +27,7 @@ c = C-c          # Copy
 v = C-v          # Paste
 x = C-x          # Cut
 z = C-z          # Undo
+Z = C-S-z        # Redo (Cmd+Shift+Z)
 s = C-s          # Save
 f = C-f          # Find
 w = C-w          # Close tab
@@ -46,7 +46,7 @@ q = C-q          # Quit
 9 = A-9
 
 [cmd]
-# Text navigation
+# Text navigation and selection
 left = home
 right = end
 up = pageup
@@ -54,7 +54,7 @@ down = pagedown
 
 # As soon as tab is pressed (but not yet released), we switch to the
 # "app_switch_state" overlay where we can handle Meta-Backtick differently.
-# Also, send a 'M-tab' key tap before entering app_switch_sate.
+# Also, send a 'M-tab' key tap before entering app_switch_state.
 tab = swapm(app_switch_state, M-tab)
 
 # Switch to next window in the application group using default binding (alt+f6)
@@ -62,7 +62,6 @@ tab = swapm(app_switch_state, M-tab)
 
 # app_switch_state modifier layer; inherits from 'Meta' modifier layer
 [app_switch_state:M]
-
 # Switch to next application
 tab = M-tab
 right = M-tab
@@ -78,7 +77,7 @@ down = M-down
 left = M-left
 right = M-right
 
-# Workspaces using custom bindings (change in settings to shift+super+<direction>)
+# Workspace management using custom bindings (change in settings to shift+super+<direction>)
 S-up = M-S-up
 S-down = M-S-down
 S-left = M-S-left
