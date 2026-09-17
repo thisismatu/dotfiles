@@ -16,7 +16,7 @@ rightmeta = layer(cmd)
 tab = noop
 
 [alt:C]
-# Mac-like option text navigation
+# Option text navigation
 right = C-right
 left = C-left
 backspace = C-backspace
@@ -46,15 +46,11 @@ q = C-q          # Quit
 9 = A-9
 
 [cmd]
-# Text navigation and selection (Mac-like)
+# Text navigation
 left = home
 right = end
 up = pageup
 down = pagedown
-S-left = S-home
-S-right = S-end
-S-up = S-pageup
-S-down = S-pagedown
 
 # As soon as tab is pressed (but not yet released), we switch to the
 # "app_switch_state" overlay where we can handle Meta-Backtick differently.
