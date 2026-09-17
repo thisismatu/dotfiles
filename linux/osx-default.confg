@@ -49,21 +49,19 @@ q = C-q          # Quit
 # Text navigation and selection (Mac-like)
 left = home
 right = end
-# up = pageup
-# down = pagedown
-shift+left = S-home
-shift+right = S-end
-# shift+up = S-pageup
-# shift+down = S-pagedown
+up = pageup
+down = pagedown
+S-left = S-home
+S-right = S-end
+S-up = S-pageup
+S-down = S-pagedown
 
 # As soon as tab is pressed (but not yet released), we switch to the
 # "app_switch_state" overlay where we can handle Meta-Backtick differently.
 # Also, send a 'M-tab' key tap before entering app_switch_sate.
 tab = swapm(app_switch_state, M-tab)
 
-# Switch to next window in the application group
-# - A-f6 is the default binding for 'cycle-group' in gnome
-# - keybinding: `gsettings get org.gnome.desktop.wm.keybindings cycle-group`
+# Switch to next window in the application group using default binding (alt+f6)
 ` = A-f6
 
 # app_switch_state modifier layer; inherits from 'Meta' modifier layer
@@ -78,13 +76,13 @@ right = M-tab
 left = M-S-tab
 
 [control+alt]
-# Window resizing (default keybindings)
-up = M-up		# Fullscreen
-down = M-down		# Tile left
-left = M-left		# Tile left
-right = M-right		# Restore
+# Window resizing using default bindings (super+<direction>)
+up = M-up
+down = M-down
+left = M-left
+right = M-right
 
-# Workspaces (change keybindings in settings)
+# Workspaces using custom bindings (change in settings to shift+super+<direction>)
 S-up = M-S-up
 S-down = M-S-down
 S-left = M-S-left
