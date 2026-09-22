@@ -1,9 +1,0 @@
-theme = "onedark"
-
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
-
-[editor.soft-wrap]
-enable = true
