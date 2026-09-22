@@ -1,23 +1,6 @@
-# Setup my laptops
+# Dotfiles
 
-Dotfiles, configs, mac defaults, and whatnot to improve the experience of using different computers for both work and lesure.
-
-- Strive for a vanilla setup
-- Do more and fiddle less
-- Every computer lives its own life
-
-## Background
-
-Mac: 
-
-System settings > Wallpaper > "Space gray pro"
-
-Linux:
-
-```sh
-gsettings set org.gnome.desktop.background picture-options 'none'
-gsettings set org.gnome.desktop.background primary-color '#7A7B81'
-```
+Dotfiles, configs, defaults, and whatnot to improve the experience of using different computers for both work and lesure.
 
 ## Software
 
@@ -72,9 +55,9 @@ https://www.macports.org/install.php
 sudo port install git tig mcfly trash wget mole-cleaner zsh-completions zsh-autosuggestions
 ```
 
-## Defaults & audit
+## MacOS Defaults & Security audit
 
-Once the apps are installed, set up the MacOS preferences and finally run the audit script.
+Once the apps are installed, set up the MacOS defaults and finally run the audit script.
 
 ```sh
 cd mac
@@ -82,6 +65,26 @@ chmod +x defaults.sh audit.command
 ./defaults.sh
 ./audit.command
 ```
+
+## WhatsApp local backups
+
+- Install [OpenMTP](https://github.com/ganeshrvel/openmtp) 
+- Copy `Internal Storage > Android > media > com.whatsapp.com > Whatsapp` to your computer
+- If OpenMTP is not finding your Android device, check that developer options are off and the usb mode is set to "File Transfer"
+
+## Desktop background
+
+Mac: 
+
+System settings > Wallpaper > "Space gray pro"
+
+Linux:
+
+```sh
+gsettings set org.gnome.desktop.background picture-options 'none'
+gsettings set org.gnome.desktop.background primary-color '#7A7B81'
+```
+
 
 ## Development
 
@@ -183,9 +186,3 @@ Add chrome with `web-security` disabled for local development, if needed.
 # add to e.g. /usr/local/bin/chrome-dev
 open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
 ```
-
-## WhatsApp local backups
-
-- Install [OpenMTP](https://github.com/ganeshrvel/openmtp) 
-- Copy `Internal Storage > Android > media > com.whatsapp.com > Whatsapp` to your computer
-- If OpenMTP is not finding your Android device, check that developer options are off and the usb mode is set to "File Transfer"
