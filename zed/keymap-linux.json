@@ -9,22 +9,28 @@
   {
     "context": "Editor",
     "bindings": {
-      "super-up": "editor::MoveLineUp",
-      "super-down": "editor::MoveLineDown",
-      "super-shift-up": "editor::DuplicateLineUp",
-      "super-shift-down": "editor::DuplicateLineDown",
-      "ctrl-up": "editor::MoveToBeginning",
-      "ctrl-down": "editor::MoveToEnd",
-      "ctrl-shift-up": "editor::SelectToBeginning",
-      "ctrl-shift-down": "editor::SelectToEnd"
-    }
+      "shift-alt-up": "editor::DuplicateLineUp",
+      "shift-alt-down": "editor::DuplicateLineDown",
+      "ctrl-alt-home": [
+        "editor::AddSelectionAbove",
+        {
+          "skip_soft_wrap": true,
+        },
+      ],
+      "ctrl-alt-end": [
+        "editor::AddSelectionBelow",
+        {
+          "skip_soft_wrap": true,
+        },
+      ],
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
       "ctrl-`": "tab_switcher::Toggle",
-      "ctrl-r": "workspace::ToggleRightDock"
-    }
+      "ctrl-r": "workspace::ToggleRightDock",
+    },
   },
   {
     "context": "Pane",
@@ -33,20 +39,20 @@
       "super-=": "pane::GoForward",
       "ctrl-tab": "pane::ActivateNextItem",
       "ctrl-shift-tab": "pane::ActivatePreviousItem",
-      "super-ctrl-t": "pane::CloseOtherItems"
-    }
+      "super-ctrl-t": "pane::CloseOtherItems",
+    },
   },
   {
     "bindings": {
       // Disable collabl panel
-      "ctrl-shift-c": null
-    }
+      "ctrl-shift-c": null,
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
       // Disable close active dock
-      "ctrl-w": null
-    }
-  }
+      "ctrl-w": null,
+    },
+  },
 ]
