@@ -1,9 +1,0 @@
-# Paths are relative to this file
-# Consider adding trailing slash for directories
-# Don't escape spaces in paths
-
-/Downloads/
-/.local/zed.app/
-/.local/share/Steam/
-/.local/share/Trash/
-/.local/share/zed/

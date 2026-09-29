@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Adapted from https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
 echo "Setting up OSX defaults"

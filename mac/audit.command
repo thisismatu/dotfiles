@@ -158,7 +158,7 @@ function runStatusChecks {
   check \
     "Deny root login over SSH?" \
     "[ ! -f /etc/ssh/sshd_config ] || grep -e '^[ \t]*PermitRootLogin[ \t]+no' /etc/ssh/sshd_config" \
-    "ERROR" "Add the line 'PermitRootLogin no' to /etc/sshd_config (requires sudo)"
+    "ERROR" "Add the line 'PermitRootLogin no' to /etc/ssh/sshd_config (requires sudo)"
 
   [ $(which brew) ] && check \
     "If homebrew is installed, is it updated and cool?" \

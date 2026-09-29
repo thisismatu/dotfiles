@@ -1,6 +1,7 @@
-# Paths are relative to this file
-# Consider adding trailing slash for directories
-# Don't escape spaces in paths
+# ~/.blinkdiskignore
+# - Paths are relative to this file
+# - Consider adding trailing slash for directories
+# - Don't escape spaces in paths
 
 /.Trash/
 /My Drive/

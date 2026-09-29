@@ -1,3 +1,5 @@
+# ~/.gitconfig
+
 [user]
     email = mathias.lindholm@gmail.com
     name = Mathias Herler
