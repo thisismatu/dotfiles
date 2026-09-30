@@ -1,5 +1,6 @@
 # ./config/nano/nanorc
 # Install newer nano with brew or port
 
+# include /usr/share/nano/*.nanorc            # Linux
 # include /opt/local/share/nano/*.nanorc      # MacPorts
 include $(brew --prefix)/share/nano/*.nanorc  # Homebrew
