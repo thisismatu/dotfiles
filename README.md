@@ -176,9 +176,7 @@ The [gitconfig](./git/gitconfig) file contains some useful aliases and settings.
 GitX does not support signing commits out of the box. But with the help of this workaround, i can get the signing to work:
 https://josh.fail/2019/signed-commits-with-gitx/
 
-A copy of the script is available at [git/gitx_signed_commits_workaround](./git/gitx_signed_commits_workaround).
-
-### Chrome with web-security disabled (optional)
+### Chrome with web-security disabled
 
 Add chrome with `web-security` disabled for local development, if needed.
 
